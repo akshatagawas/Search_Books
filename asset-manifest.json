@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/akshatagawas/Search_Books/static/css/main.38b38733.css",
+    "main.js": "/akshatagawas/Search_Books/static/js/main.08165fa7.js",
+    "static/js/453.14b22c7d.chunk.js": "/akshatagawas/Search_Books/static/js/453.14b22c7d.chunk.js",
+    "index.html": "/akshatagawas/Search_Books/index.html",
+    "main.38b38733.css.map": "/akshatagawas/Search_Books/static/css/main.38b38733.css.map",
+    "main.08165fa7.js.map": "/akshatagawas/Search_Books/static/js/main.08165fa7.js.map",
+    "453.14b22c7d.chunk.js.map": "/akshatagawas/Search_Books/static/js/453.14b22c7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38b38733.css",
+    "static/js/main.08165fa7.js"
+  ]
+}
