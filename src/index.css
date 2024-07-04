@@ -1,3 +1,5 @@
+/* Entire Application */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,183 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  background: linear-gradient(to right, #ebc36e, #c885e7); 
+  font-family: Arial, sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* Search Bar */
+.search-bar{
+  margin: 10px 10px 10px 0px;
+  width: 400px;
+
+}
+
+.search-bar-container.search-active {
+  transform: translateY(-50%);
+}
+
+
+/* Individual Cards */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  height: 350px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.book-card {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.throw-animation {
+  animation: throwAnimation 0.5s ease-in-out;
+}
+
+@keyframes throwAnimation {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Toggle Button */
+
+.toggle-btn {
+  margin: 10px 0px 10px 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.toggle-btn:focus {
+  box-shadow: none;
+}
+
+
+/* Loading Icon */
+
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Potrait mode */
+
+@media (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar{
+    width: 100%;
+  }
+
+  .book-card {
+    width: 100%;
+  }
+}
+
+.book-card {
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.throw-animation {
+  animation: throw 0.5s ease-out;
+}
+
+@keyframes throw {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
